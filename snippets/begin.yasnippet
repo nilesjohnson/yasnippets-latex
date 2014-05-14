@@ -5,6 +5,7 @@
 # group: environments
 # name: \begin{environment} ... \end{environment}
 # --
-\begin{${1:$$(yas/choose-value (mapcar 'car (LaTeX-environment-list)))}}
-$0
+\begin{${1:environment}}
+$2
 \end{$1}
+$0
