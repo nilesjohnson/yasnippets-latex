@@ -1,11 +1,11 @@
 # -*- mode: snippet -*-
 # contributor: Niles Johnson <nilesj@gmail.com>
-# key: td
+# key: tp
 # group: math
-# name: tikz diagram \[\begin{tikzpicture} ... \end{tikzpicture}\]
+# name: tikzpicture diagram \[\begin{tikzpicture}\draw ... \path ... \end{tikzpicture}\]
 # --
 \[
-\begin{tikzpicture}[x=20mm,y=20mm]
+\begin{tikzpicture}[x=${1:20}mm,y=${2:20}mm]
   \draw[tikzob,mm] %objects
   $0;
   \path[tikzar,mm] %arrows
