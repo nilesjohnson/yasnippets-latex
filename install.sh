@@ -2,7 +2,7 @@
 #
 # this installs the snippets; to install ya-snippet itself use
 # $ cd ~/.emacs.d/plugins
-# $ git clone --recursive https://github.com/joaotavora/yasnippet
+# $ git clone https://github.com/joaotavora/yasnippet
 #
 #
 # Check for command line args.
