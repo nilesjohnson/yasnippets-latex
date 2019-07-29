@@ -1,0 +1,40 @@
+# -*- mode: snippet -*-
+# contributor: Niles Johnson <nilesj@gmail.com>
+# key: tpp
+# group: math
+# name: tikzpicture pasting diagram \[\begin{tikzpicture}\draw ... \path ... \end{tikzpicture}\]
+# --
+\[
+\begin{tikzpicture}[x=${1:20}mm,y=${2:20}mm]
+  \def\w{${3:2}} % width of pasting
+  \def\h{${4:2}} % height of pasting
+  \def\m{${5:.5}} % margin around pastings
+  \draw[font=\Large] (\w+\m,0) node (eq) {=}; 
+  \newcommand{\boundary}{
+    \draw[0cell] %objects
+    $0
+    ; 
+    \path[1cell] %arrows
+    
+    ;
+  }
+  \begin{scope}[shift={(0,\h/2)}]
+    \boundary
+    \path[1cell] %arrows
+    
+    ;
+    \draw[2cell] %2cells
+    
+    ;
+  \end{scope}
+  \begin{scope}[shift={(\w+\m+\m,\h/2)}]
+  \boundary
+  \path[1cell] %arrows
+  
+  ;
+  \draw[2cell] %2cells
+  
+  ;
+  \end{scope}
+\end{tikzpicture}
+\]
