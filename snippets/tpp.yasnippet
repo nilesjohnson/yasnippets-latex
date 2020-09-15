@@ -2,7 +2,7 @@
 # contributor: Niles Johnson <nilesj@gmail.com>
 # key: tpp
 # group: math
-# name: tikzpicture pasting diagram \[\begin{tikzpicture}\draw ... \path ... \end{tikzpicture}\]
+# name: tikzpicture pasting diagram \[\begin{tikzpicture}\draw ... \draw ... \end{tikzpicture}\]
 # --
 \[
 \begin{tikzpicture}[x=${1:20}mm,y=${2:20}mm]
@@ -20,6 +20,9 @@
   }
   \begin{scope}[shift={(0,\h/2)}]
     \boundary
+    \draw[0cell]
+
+    ;
     \draw[1cell] %arrows
     
     ;
@@ -28,13 +31,16 @@
     ;
   \end{scope}
   \begin{scope}[shift={(\w+\m+\m,\h/2)}]
-  \boundary
-  \path[1cell] %arrows
+    \boundary
+    \draw[0cell]
+
+    ;
+    \draw[1cell] %arrows
   
-  ;
-  \draw[2cell] %2cells
+    ;
+    \draw[2cell] %2cells
   
-  ;
+    ;
   \end{scope}
 \end{tikzpicture}
 \]
