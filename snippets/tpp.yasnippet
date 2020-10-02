@@ -6,10 +6,11 @@
 # --
 \[
 \begin{tikzpicture}[x=${1:20}mm,y=${2:20}mm]
-  \def\w{${3:2}} % width of pasting
-  \def\h{${4:2}} % height of pasting
-  \def\m{${5:.5}} % margin around pastings
-  \draw[font=\Large] (\w+\m,0) node (eq) {=}; 
+  \def\wl{{$3:2.1}} % width to shift left
+  \def\wr{{$4:.7}} % width to shift right
+  \def\h{{$5:1}} % height to shift vertically
+  \def\m{{$6:.5}} % margin around pastings
+  \draw[font=\Large] (0,0) node (eq) {=}; 
   \newcommand{\boundary}{
     \draw[0cell] %objects
     $0
@@ -18,7 +19,7 @@
     
     ;
   }
-  \begin{scope}[shift={(0,\h/2)}]
+  \begin{scope}[shift={(-\wl-\m,\h)}]
     \boundary
     \draw[0cell]
 
@@ -30,7 +31,7 @@
     
     ;
   \end{scope}
-  \begin{scope}[shift={(\w+\m+\m,\h/2)}]
+  \begin{scope}[shift={(\wr+\m,\h)}]
     \boundary
     \draw[0cell]
 
